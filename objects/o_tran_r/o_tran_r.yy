@@ -2,7 +2,10 @@
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
   "name": "o_tran_r",
-  "spriteId": null,
+  "spriteId": {
+    "name": "s_tran_r",
+    "path": "sprites/s_tran_r/s_tran_r.yy",
+  },
   "solid": false,
   "visible": true,
   "managed": true,

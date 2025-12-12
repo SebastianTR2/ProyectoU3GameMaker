@@ -1,12 +1,24 @@
 /// STEP EVENT - o_attack_hitbox
-with (o_enemy)
+
+show_debug_message("Hitbox en posición: " + string(x) + ", " + string(y));
+
+// Verificar colisión con enemigos
+var enemy = instance_place(x, y, o_enemy_body);
+if (enemy != noone)
 {
-    if (place_meeting(x, y, other))
-    {
-        scr_enemy_take_damage(id, other.damage, other.attack_type);
-        instance_destroy(other);
-    }
+    show_debug_message("¡Hitbox detectó enemigo!");
+    scr_enemy_take_damage(enemy, damage, attack_type);
+    instance_destroy();
 }
+else
+{
+    show_debug_message("Hitbox NO detectó enemigos");
+}
+
 // Reducir duración
 lifespan--;
-if (lifespan <= 0) instance_destroy();
+if (lifespan <= 0) 
+{
+    show_debug_message("Hitbox destruido por tiempo");
+    instance_destroy();
+}

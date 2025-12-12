@@ -2,8 +2,11 @@
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
   "name": "o_solid",
-  "spriteId": null,
-  "solid": false,
+  "spriteId": {
+    "name": "s_solid",
+    "path": "sprites/s_solid/s_solid.yy",
+  },
+  "solid": true,
   "visible": true,
   "managed": true,
   "spriteMaskId": null,

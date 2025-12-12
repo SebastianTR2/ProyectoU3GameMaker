@@ -1,60 +1,64 @@
 /// DRAW EVENT - o_player
-
+draw_sprite(sprite_index, 0, x, y + z);;
 // === ANIMACIÓN SEGÚN CONTROL Y ESTADO ===
-if(global.control_type=="topdown"){
-    if(state=="idle"){
-        switch(sprite_facing){
-            case 0: sprite_index=s_playerIdle; image_xscale=1; break; // abajo
-            case 1: sprite_index=s_playerIdle; image_xscale=-1; break; // izquierda
-            case 2: sprite_index=s_playerIdle; image_xscale=1; break; // derecha
-            case 3: sprite_index=s_playerIdle; image_xscale=1; break; // arriba
+if (global.control_type == "topdown")
+{
+	
+	
+    if (state == "idle")
+    {
+        switch(sprite_facing)
+        {
+            case 0: sprite_index = s_playerIdle; image_xscale = 1; break;  // abajo
+            case 1: sprite_index = s_playerIdle; image_xscale = -1; break; // izquierda
+            case 2: sprite_index = s_playerIdle; image_xscale = 1; break;  // derecha
+            case 3: sprite_index = s_playerIdle; image_xscale = 1; break;  // arriba
         }
-    }else if(state=="walk"){
-        switch(sprite_facing){
-            case 0: sprite_index=s_playerWalk; image_xscale=1; break;
-            case 1: sprite_index=s_playerWalk; image_xscale=-1; break;
-            case 2: sprite_index=s_playerWalk; image_xscale=1; break;
-            case 3: sprite_index=s_playerWalk; image_xscale=1; break;
+    }
+    else if (state == "walk")
+    {
+        switch(sprite_facing)
+        {
+            case 0: sprite_index = s_playerWalk; image_xscale = 1; break;
+            case 1: sprite_index = s_playerWalk; image_xscale = -1; break;
+            case 2: sprite_index = s_playerWalk; image_xscale = 1; break;
+            case 3: sprite_index = s_playerWalk; image_xscale = 1; break;
         }
     }
 }
-else // === LATERAL ===
-{
-    if (!is_jumping)
-        sprite_index = (xSpeed == 0) ? s_player : s_player;
-    else
-        sprite_index = s_player;
-}
+
+/// @description Draw Ourselves
+
+/*No sé de quien es esto pero para el salto no lo necesito asi que xd
+depth = -bbox_bottom + z * 2;
+*/
+//Shadow
+draw_sprite(s_playershadow, 0, x, y + zFloor);
+
 
 // === DIBUJAR PERSONAJE ===
-draw_self();
+//draw_self();
 
-// === BARRAS ===
-var offset_y = -50;
+// === INDICADOR DE INTERACCIÓN ===
+if (can_interact)
+{
+    var _radius = 64; // Aumentado a 64
+    var _nearby_obj = collision_circle(x, y, _radius, o_interactable, false, true);
+    
+    if (_nearby_obj != noone)
+    {
+        // Dibujar tecla E encima del jugador
+        if (sprite_exists(s_keyboard_E))
+        {
+            draw_sprite(s_keyboard_E, 0, x, y - 40);
+        }
+    }
+}
 
-// Clamp de ratios (evita valores negativos)
-var hp_ratio = clamp(hp / hp_max, 0, 1);
-var stamina_ratio = clamp(stamina / stamina_max, 0, 1);
-var mana_ratio = clamp(mana / mana_max, 0, 1);
 
-// Vida
-draw_set_color(c_red);
-draw_rectangle(x - 20, y + offset_y, x - 20 + (hp_ratio * 40), y + offset_y + 4, false);
-
-// Stamina
-draw_set_color(c_lime);
-draw_rectangle(x - 20, y + offset_y + 6, x - 20 + (stamina_ratio * 40), y + offset_y + 10, false);
-
-// Maná
-draw_set_color(c_aqua);
-draw_rectangle(x - 20, y + offset_y + 12, x - 20 + (mana_ratio * 40), y + offset_y + 16, false);
-
-draw_set_color(c_white);
-
-// === INFORMACIÓN DE NIVEL Y AFINIDAD ===
-draw_text(x - 25, y + offset_y - 10, "Lv." + string(level) + " | " + string(affinity));
-
+// ====================================================
 // === EFECTO DE DESVANECER (FADE OUT / REAPARECER) ===
+// ====================================================
 if (is_fading)
 {
     fade_alpha += 0.03;
@@ -66,7 +70,6 @@ if (is_fading)
     draw_set_alpha(1);
     draw_set_color(c_white);
 
-    // --- Cuando el fade llega a negro ---
     if (fade_alpha >= 1)
     {
         is_fading = false;
@@ -84,7 +87,7 @@ if (is_fading)
             y = spawn_y;
         }
 
-        // Restaurar estado
+        // Restaurar stats
         hp = hp_max;
         stamina = stamina_max;
         mana = mana_max;
@@ -95,3 +98,100 @@ if (is_fading)
         show_debug_message("Jugador reaparecido correctamente.");
     }
 }
+
+// ==========================================
+// DRAW UI (NIVEL Y MENU)
+// ==========================================
+// Usar coordenadas de vista para que el menú siga a la cámara
+var cx = camera_get_view_x(view_camera[0]);
+var cy = camera_get_view_y(view_camera[0]);
+var cw = camera_get_view_width(view_camera[0]);
+var ch = camera_get_view_height(view_camera[0]);
+
+if (variable_global_exists("font_custom")) draw_set_font(global.font_custom); // Probar fallback si existe
+else if (font_exists(f_espanol)) draw_set_font(f_espanol);
+
+draw_set_halign(fa_center);
+draw_set_valign(fa_middle);
+
+// LEVEL UP MESSAGE
+if (level_up_timer > 0)
+{
+    // Efecto de parpadeo
+    if (level_up_timer % 20 < 10) draw_set_color(c_yellow); else draw_set_color(c_white);
+    
+    // Dibujar texto con borde negro para legibilidad
+    var msg = level_up_message;
+    draw_set_color(c_black);
+    draw_text_transformed(cx + cw/2 + 2, cy + ch*0.15 + 2, msg, 1.2, 1.2, 0);
+    
+    if (level_up_timer % 20 < 10) draw_set_color(c_yellow); else draw_set_color(c_white);
+    draw_text_transformed(cx + cw/2, cy + ch*0.15, msg, 1.2, 1.2, 0);
+    
+    draw_set_color(c_white);
+}
+
+// ATTRIBUTE MENU
+if (menu_open)
+{
+    // Background Overlay
+    draw_set_alpha(0.8);
+    draw_set_color(c_black);
+    draw_roundrect(cx + cw*0.2, cy + ch*0.2, cx + cw*0.8, cy + ch*0.8, false);
+    draw_set_alpha(1);
+    
+    // Panel Border
+    draw_set_color(c_white);
+    draw_roundrect(cx + cw*0.2, cy + ch*0.2, cx + cw*0.8, cy + ch*0.8, true);
+    
+    // Title
+    draw_set_color(c_yellow);
+    draw_text_transformed(cx + cw/2, cy + ch*0.28, "=== ATRIBUTOS ===", 1.2, 1.2, 0);
+    
+    // Stats List
+    var start_y = cy + ch*0.4;
+    var step_y = 35; // Espaciado vertical
+    
+    for (var i = 0; i < array_length(menu_options); i++)
+    {
+        var txt = menu_options[i] + ": ";
+        var val = 0;
+        switch(i) {
+            case 0: val = attr_int; break;
+            case 1: val = attr_str; break;
+            case 2: val = attr_spd; break;
+            case 3: val = attr_vit; break;
+        }
+        
+        var color = c_white;
+        var prefix = "";
+        
+        if (menu_selected == i) {
+            color = c_aqua; // Color de selección
+            prefix = ">> ";
+            
+            // Dibujar rectángulo de selección
+            draw_set_alpha(0.3);
+            draw_set_color(c_white);
+            draw_rectangle(cx + cw*0.3, start_y + (i * step_y) - 15, cx + cw*0.7, start_y + (i * step_y) + 15, false);
+            draw_set_alpha(1);
+        }
+        
+        draw_set_color(color);
+        draw_text(cx + cw/2, start_y + (i * step_y), prefix + txt + string(val));
+    }
+    
+    // Available Points
+    if (attr_points > 0) draw_set_color(c_lime); else draw_set_color(c_gray);
+    draw_text(cx + cw/2, start_y + (4.5 * step_y), "Puntos disponibles: " + string(attr_points));
+    
+    // Instructions
+    draw_set_color(c_ltgray);
+    draw_text_transformed(cx + cw/2, cy + ch*0.75, "Mover: [Flechas] | Asignar: [Enter] | Cerrar: [Esc]", 0.8, 0.8, 0);
+}
+
+// Reset defaults
+draw_set_halign(fa_left);
+draw_set_valign(fa_top);
+draw_set_color(c_white)
+

@@ -2,13 +2,12 @@
 x += lengthdir_x(speed, direction);
 y += lengthdir_y(speed, direction);
 
-with (o_enemy)
+// Verificar colisión con enemigos
+var enemy = instance_place(x, y, o_enemy_body);
+if (enemy != noone)
 {
-    if (place_meeting(x, y, other))
-    {
-        scr_enemy_take_damage(id, other.damage, other.element);
-        if (!other.pierce) instance_destroy(other);
-    }
+    scr_enemy_take_damage(enemy, damage, element);
+    if (!pierce) instance_destroy();
 }
 
 if (place_meeting(x, y, o_solid)) instance_destroy();

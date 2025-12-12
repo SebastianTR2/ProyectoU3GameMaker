@@ -5,4 +5,3 @@ damage = 20;
 element = "neutral";
 life = 90;
 pierce = false;
-image_angle = direction;

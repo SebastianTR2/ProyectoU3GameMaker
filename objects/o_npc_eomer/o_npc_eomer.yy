@@ -2,7 +2,10 @@
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
   "name": "o_npc_eomer",
-  "spriteId": null,
+  "spriteId": {
+    "name": "s_npc_eomer",
+    "path": "sprites/s_npc_eomer/s_npc_eomer.yy",
+  },
   "solid": false,
   "visible": true,
   "managed": true,

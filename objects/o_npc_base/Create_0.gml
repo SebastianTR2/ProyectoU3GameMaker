@@ -13,3 +13,7 @@ player_ref          = noone;           // Referencia al jugador
 // --- Variables globales seguras ---
 if (!variable_global_exists("dialogue_active")) global.dialogue_active = false;
 if (!variable_global_exists("npc_talking")) global.npc_talking = noone;
+
+
+// Nuevo: registrar última línea usada
+last_dialog_line = 0;

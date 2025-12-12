@@ -2,7 +2,10 @@
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
   "name": "o_magic_projectile",
-  "spriteId": null,
+  "spriteId": {
+    "name": "s_bolafuego",
+    "path": "sprites/s_bolafuego/s_bolafuego.yy",
+  },
   "solid": false,
   "visible": true,
   "managed": true,

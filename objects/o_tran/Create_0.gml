@@ -1,2 +1,3 @@
 
-target_room = room;
+target = room;
+ori = -1;

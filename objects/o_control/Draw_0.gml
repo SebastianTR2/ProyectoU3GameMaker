@@ -1,34 +1,82 @@
+/// DRAW – o_control
 
-camera_x = camera_get_view_x(view_camera[0]);
-camera_y = camera_get_view_y(view_camera[0]);
+if (!instance_exists(o_player)) exit;
 
-//draw_text(camera_x+16,camera_y+16,o_player.hp);
+var cx = camera_get_view_x(view_camera[0]);
+var cy = camera_get_view_y(view_camera[0]);
 
-if(o_player.hp > 0)
-{
-	draw_sprite_ext(s_life_bar,0,camera_x+54,camera_y+27,o_player.hp*100/o_player.hpMax,1,0,c_white,1);
-}
+// -------------------------------------------------------
+// DIBUJAR HUD
+// -------------------------------------------------------
+draw_sprite(s_HUD, 0, cx, cy);
 
-draw_sprite(s_HUD,0,camera_x,camera_y);
+// =======================================================
+// RETRATO (centrado dentro del marco redondo)
+// =======================================================
+var portrait_x = cx + 60;
+var portrait_y = cy + 60;
 
+draw_sprite_ext(
+    o_player.sprite_index,
+    0,
+    portrait_x,
+    portrait_y,
+    1.3, 1.3,
+    0,
+    c_white,
+    1
+);
 
-draw_set_color(c_white);
-draw_set_font(font_hud);
+// =======================================================
+// BARRA DE VIDA (roja)
+// -------------------------------------------------------
+var hp_ratio = o_player.hp / o_player.hp_max;
 
-switch(o_player.weapon)
-{
-	case "pistol":
-		draw_text(camera_x+58,camera_y+70,"000");	
-	break;
-	
-	case "heavy":
-		draw_sprite(s_pow_magnum,0,camera_x+20,camera_y+60)
-		draw_text(camera_x+58,camera_y+70,o_player.ammo_heavy);	
-	break;
-	
-	case "laser":
-		draw_sprite(s_pow_laser,0,camera_x+20,camera_y+60)
-		draw_text(camera_x+58,camera_y+70,o_player.ammo_laser);	
-	break;
-}
+var hp_x = cx + 150;
+var hp_y = cy + 42;
+var hp_w = 150;   // ANCHO EXACTO DEL HUECO
+
+draw_set_color(c_red);
+draw_rectangle(hp_x, hp_y, hp_x + hp_w * hp_ratio, hp_y + 18, false);
+
+// =======================================================
+// BARRA DE STAMINA (verde)
+// -------------------------------------------------------
+var st_ratio = o_player.stamina / o_player.stamina_max;
+
+var st_x = cx + 150;
+var st_y = cy + 102;
+var st_w = 150;
+
+draw_set_color(c_lime);
+draw_rectangle(st_x, st_y, st_x + st_w * st_ratio, st_y + 18, false);
+
+// =======================================================
+// BARRA DE MANÁ (VERTICAL) – Marco largo vertical
+// =======================================================
+
+// Porcentaje de maná actual
+var mn_ratio = clamp(o_player.mana / o_player.mana_max, 0, 1);
+
+// Dimensiones del marco vertical
+var mn_x = cx + 10;      // Ajustado a tu imagen
+var mn_y_top = cy + 140;  // parte superior del marco
+var mn_y_bottom = cy + 260; // parte inferior del marco
+var mn_width = 28;       // grosor de la barra
+
+// Altura total del hueco interno
+var mn_height = mn_y_bottom - mn_y_top;
+
+// Altura de la parte llena
+var mn_fill = mn_height * mn_ratio;
+
+// Dibujar de abajo hacia arriba
+draw_set_color(c_aqua);
+draw_rectangle(
+    mn_x,
+    mn_y_bottom - mn_fill,
+    mn_x + mn_width,
+    mn_y_bottom,
+    false
+);
 

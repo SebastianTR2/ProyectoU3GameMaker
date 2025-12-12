@@ -45,7 +45,7 @@
     "PhysicsWorldPixToMetres": 0.1,
   },
   "parent": {
-    "name": "Cap1",
-    "path": "folders/Rooms/Cap1.yy",
+    "name": "Cap2",
+    "path": "folders/Rooms/Cap2.yy",
   },
 }

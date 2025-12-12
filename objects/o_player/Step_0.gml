@@ -16,7 +16,31 @@ switch (global.control_type)
         exit;
     break;
 }
-
+if (global.control_type == "topdown")
+{
+	
+	
+    if (state == "idle")
+    {
+        switch(sprite_facing)
+        {
+            case 0: sprite_index = s_playerIdle; image_xscale = 1; break;  // abajo
+            case 1: sprite_index = s_playerIdle; image_xscale = -1; break; // izquierda
+            case 2: sprite_index = s_playerIdle; image_xscale = 1; break;  // derecha
+            case 3: sprite_index = s_playerIdle; image_xscale = 1; break;  // arriba
+        }
+    }
+    else if (state == "walk")
+    {
+        switch(sprite_facing)
+        {
+            case 0: sprite_index = s_playerWalk; image_xscale = 1; break;
+            case 1: sprite_index = s_playerWalk; image_xscale = -1; break;
+            case 2: sprite_index = s_playerWalk; image_xscale = 1; break;
+            case 3: sprite_index = s_playerWalk; image_xscale = 1; break;
+        }
+    }
+}
 // -----Cambios Fernando para Saltar
 var jump = keyboard_check_pressed(vk_space);
 	//Jumping

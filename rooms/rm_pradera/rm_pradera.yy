@@ -31,6 +31,7 @@
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_36856451","properties":[],"isDnd":false,"objectId":{"name":"o_tran","path":"objects/o_tran/o_tran.yy",},"inheritCode":false,"hasCreationCode":true,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":0.0,"y":2048.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_34368342","properties":[],"isDnd":false,"objectId":{"name":"o_tran","path":"objects/o_tran/o_tran.yy",},"inheritCode":false,"hasCreationCode":true,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":2053.0,"y":4414.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_27F407E6","properties":[],"isDnd":false,"objectId":{"name":"o_tran","path":"objects/o_tran/o_tran.yy",},"inheritCode":false,"hasCreationCode":true,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":1373.0,"y":3012.0,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_54764A9D","properties":[],"isDnd":false,"objectId":{"name":"o_camera","path":"objects/o_camera/o_camera.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":0.0,"y":1920.0,},
       ],"visible":true,"depth":300,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritVisibility":true,"inheritSubLayers":true,"gridX":64,"gridY":64,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":null,"properties":[],},
     {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"enemies","instances":[],"visible":true,"depth":400,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritVisibility":true,"inheritSubLayers":true,"gridX":32,"gridY":32,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":null,"properties":[],},
     {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"terrain","instances":[
@@ -102,6 +103,7 @@
     {"name":"inst_36856451","path":"rooms/rm_pradera/rm_pradera.yy",},
     {"name":"inst_34368342","path":"rooms/rm_pradera/rm_pradera.yy",},
     {"name":"inst_27F407E6","path":"rooms/rm_pradera/rm_pradera.yy",},
+    {"name":"inst_54764A9D","path":"rooms/rm_pradera/rm_pradera.yy",},
   ],
   "inheritCreationOrder": false,
   "sequenceId": null,

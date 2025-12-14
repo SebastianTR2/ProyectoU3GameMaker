@@ -1,4 +1,4 @@
-/// o_chat_decision — CREATE EVENT
+ /// o_chat_decision — CREATE EVENT
 
 // Crear estructura de opciones
 options = ds_list_create();

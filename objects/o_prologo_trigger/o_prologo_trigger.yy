@@ -3,8 +3,8 @@
   "resourceVersion": "1.0",
   "name": "o_prologo_trigger",
   "spriteId": {
-    "name": "s_craterPrologo",
-    "path": "sprites/s_craterPrologo/s_craterPrologo.yy",
+    "name": "s_cofre",
+    "path": "sprites/s_cofre/s_cofre.yy",
   },
   "solid": false,
   "visible": true,

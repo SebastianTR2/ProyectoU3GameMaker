@@ -1,7 +1,8 @@
 
 // Globales ---------------------------
 
-global.previous_room = 0;
+global.previous_room  = noone;
+global.previous_entry = noone;
 global.checkpoint = 0;
 global.player_respawn = 0;
 

@@ -1,5 +1,5 @@
 /// DRAW EVENT - o_player
-draw_sprite(sprite_index, image_index, x, y + z);;
+draw_sprite(sprite_index, image_index, x, y + z);
 // === ANIMACIÓN SEGÚN CONTROL Y ESTADO ===
 
 
@@ -14,6 +14,112 @@ draw_sprite(s_playershadow, 0, x, y + zFloor);
 
 // === DIBUJAR PERSONAJE ===
 //draw_self();
+
+// ====================================================
+// === BARRAS DE STATS FLOTANTES (DEBAJO DEL JUGADOR) ===
+// ====================================================
+var bar_offset_y = 10; // Distancia DEBAJO del jugador
+var bar_width = 80;  // Más ancho para que quepa el texto
+var bar_height = 10; // Más alto para que quepa el texto
+var bar_gap = 2; // Espacio entre barras
+var text_scale = 0.6; // Escala del texto para que quepa mejor
+
+// Centrar las barras horizontalmente sobre el jugador
+var bar_x = x - bar_width/2;
+
+// --- BARRA DE VIDA (primera, arriba) ---
+var hp_y = y + bar_offset_y;
+var hp_ratio = clamp(hp / hp_max, 0, 1);
+
+// Fondo barra vida
+draw_set_color(c_black);
+draw_rectangle(bar_x - 1, hp_y - 1, bar_x + bar_width + 1, hp_y + bar_height + 1, false);
+
+// Barra vida (roja)
+draw_set_color(c_red);
+draw_rectangle(bar_x, hp_y, bar_x + (bar_width * hp_ratio), hp_y + bar_height, false);
+
+// Borde barra vida
+draw_set_color(c_white);
+draw_rectangle(bar_x, hp_y, bar_x + bar_width, hp_y + bar_height, true);
+
+// Texto HP (DENTRO de la barra, centrado con borde negro)
+if (font_exists(f_espanol)) draw_set_font(f_espanol);
+draw_set_halign(fa_center);
+draw_set_valign(fa_middle);
+var hp_text = string(max(0, floor(hp))) + "/" + string(hp_max);
+
+// Borde negro (sombra) para el texto
+draw_set_color(c_black);
+draw_text_transformed(x - 1, hp_y + bar_height/2, hp_text, text_scale, text_scale, 0);
+draw_text_transformed(x + 1, hp_y + bar_height/2, hp_text, text_scale, text_scale, 0);
+draw_text_transformed(x, hp_y + bar_height/2 - 1, hp_text, text_scale, text_scale, 0);
+draw_text_transformed(x, hp_y + bar_height/2 + 1, hp_text, text_scale, text_scale, 0);
+
+// Texto blanco encima
+draw_set_color(c_white);
+draw_text_transformed(x, hp_y + bar_height/2, hp_text, text_scale, text_scale, 0);
+
+// --- BARRA DE MANÁ (debajo de vida) ---
+var mana_y = hp_y + bar_height + bar_gap;
+var mana_ratio = clamp(mana / mana_max, 0, 1);
+
+// Fondo barra maná
+draw_set_color(c_black);
+draw_rectangle(bar_x - 1, mana_y - 1, bar_x + bar_width + 1, mana_y + bar_height + 1, false);
+
+// Barra maná (azul)
+draw_set_color(c_aqua);
+draw_rectangle(bar_x, mana_y, bar_x + (bar_width * mana_ratio), mana_y + bar_height, false);
+
+// Borde barra maná
+draw_set_color(c_white);
+draw_rectangle(bar_x, mana_y, bar_x + bar_width, mana_y + bar_height, true);
+
+// Texto Maná (DENTRO de la barra, centrado con borde negro)
+draw_set_halign(fa_center);
+draw_set_valign(fa_middle);
+var mana_text = string(max(0, floor(mana))) + "/" + string(mana_max);
+
+// Borde negro (sombra) para el texto
+draw_set_color(c_black);
+draw_text_transformed(x - 1, mana_y + bar_height/2, mana_text, text_scale, text_scale, 0);
+draw_text_transformed(x + 1, mana_y + bar_height/2, mana_text, text_scale, text_scale, 0);
+draw_text_transformed(x, mana_y + bar_height/2 - 1, mana_text, text_scale, text_scale, 0);
+draw_text_transformed(x, mana_y + bar_height/2 + 1, mana_text, text_scale, text_scale, 0);
+
+// Texto blanco encima
+draw_set_color(c_white);
+draw_text_transformed(x, mana_y + bar_height/2, mana_text, text_scale, text_scale, 0);
+
+// --- BARRA DE ESTAMINA (a la izquierda, centrada verticalmente) ---
+var stamina_bar_width = 6; // Barra vertical delgada
+var stamina_bar_height = (bar_height * 2) + bar_gap; // Misma altura total que HP+Mana
+var stamina_x = bar_x - 10; // A la izquierda de las barras principales
+var stamina_y = hp_y; // Empieza al mismo nivel que HP
+var stamina_ratio = clamp(stamina / stamina_max, 0, 1);
+
+// Fondo barra estamina (vertical)
+draw_set_color(c_black);
+draw_rectangle(stamina_x - 1, stamina_y - 1, stamina_x + stamina_bar_width + 1, stamina_y + stamina_bar_height + 1, false);
+
+// Barra estamina (verde, se llena de abajo hacia arriba)
+draw_set_color(c_lime);
+var stamina_fill_height = stamina_bar_height * stamina_ratio;
+draw_rectangle(stamina_x, stamina_y + stamina_bar_height - stamina_fill_height, 
+               stamina_x + stamina_bar_width, stamina_y + stamina_bar_height, false);
+
+// Borde barra estamina
+draw_set_color(c_white);
+draw_rectangle(stamina_x, stamina_y, stamina_x + stamina_bar_width, stamina_y + stamina_bar_height, true);
+
+// Reset drawing settings
+draw_set_font(-1);
+draw_set_color(c_white);
+draw_set_halign(fa_left);
+draw_set_valign(fa_top);
+
+
 
 // === INDICADOR DE INTERACCIÓN ===
 if (can_interact)

@@ -29,7 +29,7 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Cinematica",
-    "path": "folders/Objects/Story/Cinematica.yy",
+    "name": "cinemacti",
+    "path": "folders/Objects/Story/cinemacti.yy",
   },
 }

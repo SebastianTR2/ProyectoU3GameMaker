@@ -31,7 +31,7 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Items",
-    "path": "folders/Objects/Level/Items.yy",
+    "name": "Estructuras",
+    "path": "folders/Objects/Level/Estructuras.yy",
   },
 }

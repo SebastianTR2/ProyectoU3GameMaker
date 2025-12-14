@@ -2,7 +2,10 @@
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
   "name": "o_spawn_player",
-  "spriteId": null,
+  "spriteId": {
+    "name": "s_craterPrologo",
+    "path": "sprites/s_craterPrologo/s_craterPrologo.yy",
+  },
   "solid": false,
   "visible": true,
   "managed": true,
@@ -21,11 +24,14 @@
   "physicsStartAwake": true,
   "physicsKinematic": false,
   "physicsShapePoints": [],
-  "eventList": [],
+  "eventList": [
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":4,"eventType":7,"collisionObjectId":null,},
+  ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Cinematica",
-    "path": "folders/Objects/Story/Cinematica.yy",
+    "name": "cinemacti",
+    "path": "folders/Objects/Story/cinemacti.yy",
   },
 }

@@ -10,7 +10,7 @@ if (keyboard_check_pressed(vk_space)) {
         // OPCIONES
         if (variable_global_exists("dialog_options") && !is_undefined(global.dialog_options)) {
             if (array_length(global.dialog_options) > 0) {
-                instance_create_layer(0, 0, "GUI", o_chat_decision);
+                instance_create_layer(0, 0, "Instances", o_chat_decision);
             }
         }
 

@@ -3,7 +3,7 @@ if (hover) {
 
     switch (action)
     {
-        case "newgame": room_goto(rm_pradera); break;  
+        case "newgame": room_goto(rm_Pueblo_Roll); break;  
 		//rm_Pueblo_Roll  rm_pradera  rm_Entrada_Exterior  
 		// rm_mundo_abierto
 		

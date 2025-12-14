@@ -69,6 +69,6 @@
   "nineSlice": null,
   "parent": {
     "name": "prologo",
-    "path": "folders/Sprites/levels/prologo.yy",
+    "path": "folders/Sprites/levels/Cuartos/prologo.yy",
   },
 }

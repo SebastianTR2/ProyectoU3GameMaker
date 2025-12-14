@@ -69,6 +69,6 @@
   "nineSlice": null,
   "parent": {
     "name": "cosas",
-    "path": "folders/Sprites/levels/PuebloRoll/cosas.yy",
+    "path": "folders/Sprites/levels/Cuartos/PuebloRoll/cosas.yy",
   },
 }

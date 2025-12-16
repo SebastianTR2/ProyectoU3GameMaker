@@ -505,3 +505,6 @@ if (hp <= 0 && dead == 0)
 {
     scr_player_die();
 }
+
+// PROFUNDIDAD VISUAL (DEPTH SORTING)
+depth = -y;

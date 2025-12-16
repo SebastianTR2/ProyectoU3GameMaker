@@ -66,6 +66,7 @@
     {"id":{"name":"o_skeleton_arrow","path":"objects/o_skeleton_arrow/o_skeleton_arrow.yy",},"order":1,},
     {"id":{"name":"s_ComidaBarraPan","path":"sprites/s_ComidaBarraPan/s_ComidaBarraPan.yy",},"order":9,},
     {"id":{"name":"s_npc_viejo","path":"sprites/s_npc_viejo/s_npc_viejo.yy",},"order":11,},
+    {"id":{"name":"scr_recepcionista","path":"scripts/scr_recepcionista/scr_recepcionista.yy",},"order":7,},
     {"id":{"name":"o_npc_recepcionista","path":"objects/o_npc_recepcionista/o_npc_recepcionista.yy",},"order":2,},
     {"id":{"name":"o_fire_breath","path":"objects/o_fire_breath/o_fire_breath.yy",},"order":1,},
     {"id":{"name":"s_npc_aldeano2","path":"sprites/s_npc_aldeano2/s_npc_aldeano2.yy",},"order":7,},

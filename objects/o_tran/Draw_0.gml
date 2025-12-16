@@ -1,7 +1,10 @@
 /// @description Draw Interaction Prompt
 
-// Solo mostrar si el jugador está cerca
-if (player_near) {
+// Solo mostrar si el jugador está cerca y NO es automática
+var _auto = false;
+if (variable_instance_exists(id, "auto") && auto) _auto = true;
+
+if (player_near && !_auto) {
     draw_set_halign(fa_center);
     draw_set_valign(fa_bottom);
     draw_set_color(c_white);
@@ -11,7 +14,11 @@ if (player_near) {
     var _txt = "Presiona E";
     
     // DEBUG: Mostrar info de la puerta
-    if (global.debug_mode == true || true) { // Forzar debug por ahora
+    // DEBUG: Mostrar info de la puerta
+    var _debug = false;
+    if (variable_global_exists("debug_mode")) _debug = global.debug_mode;
+    
+    if (_debug) { // Solo mostrar si debug está activo
         if (room == rm_Trampa_Subteranea) {
             if (x > room_width/2) _txt += "\n[LOCKED DOOR (Right)]\nKey: " + string(global.has_tutorial_key);
             else _txt += "\n[EXIT DOOR (Left)]\nAuto-Transition";

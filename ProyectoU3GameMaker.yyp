@@ -3,6 +3,7 @@
   "resourceVersion": "1.6",
   "name": "ProyectoU3GameMaker",
   "resources": [
+    {"id":{"name":"o_spawn","path":"objects/o_spawn/o_spawn.yy",},"order":0,},
     {"id":{"name":"o_llave_tutorial","path":"objects/o_llave_tutorial/o_llave_tutorial.yy",},"order":0,},
     {"id":{"name":"o_tutorial_controller","path":"objects/o_tutorial_controller/o_tutorial_controller.yy",},"order":0,},
     {"id":{"name":"scr_tutorial_dialogue","path":"scripts/scr_tutorial_dialogue/scr_tutorial_dialogue.yy",},"order":0,},
@@ -106,7 +107,6 @@
     {"id":{"name":"s_jumpAlado","path":"sprites/s_jumpAlado/s_jumpAlado.yy",},"order":2,},
     {"id":{"name":"o_puerta6","path":"objects/o_puerta6/o_puerta6.yy",},"order":16,},
     {"id":{"name":"muros2","path":"tilesets/muros2/muros2.yy",},"order":4,},
-    {"id":{"name":"spawn","path":"objects/spawn/spawn.yy",},"order":8,},
     {"id":{"name":"o_camera","path":"objects/o_camera/o_camera.yy",},"order":4,},
     {"id":{"name":"s_7","path":"sprites/s_7/s_7.yy",},"order":6,},
     {"id":{"name":"s_npc_Agricultor","path":"sprites/s_npc_Agricultor/s_npc_Agricultor.yy",},"order":3,},

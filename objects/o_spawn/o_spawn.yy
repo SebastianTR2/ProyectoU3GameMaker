@@ -1,7 +1,7 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "spawn",
+  "name": "o_spawn",
   "spriteId": {
     "name": "s_spawn",
     "path": "sprites/s_spawn/s_spawn.yy",

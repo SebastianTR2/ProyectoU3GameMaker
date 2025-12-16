@@ -6,9 +6,7 @@ if (!variable_global_exists("checkpoint_room")) {
 }
 
 // Actualizar checkpoint al iniciar la sala donde esté este objeto
-// OJO: Si hay múltiples spawns, el último en ejecutarse gana. 
-// Idealmente solo pon uno "activo" o que chequee colisión.
-// Pero para "revivir allí", asumimos que al entrar a la zona se activa.
+// Se guardan las coordenadas de ESTE objeto fuente (o_spawn)
 global.checkpoint_room = room;
 global.checkpoint_x = x;
 global.checkpoint_y = y;

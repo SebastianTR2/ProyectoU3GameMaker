@@ -11,9 +11,9 @@ function scr_dialogo_eomer(){
     ds_queue_clear(global.list_chat);
     
     // Añadir todas las líneas del diálogo a la cola
-    ds_queue_enqueue(global.list_chat, "Eomer: ¡Saludos, viajero! Me alegra verte por aquí.");
-    ds_queue_enqueue(global.list_chat, "Eomer: ¿Hay algo en lo que pueda ayudarte?");
-    ds_queue_enqueue(global.list_chat, "Eomer: Si necesitas información sobre esta región, estaré encantado de compartir lo que sé.");
+    ds_queue_enqueue(global.list_chat, "Eomer: ¡Alto ahí! ¿Qué hace un elfo solo tan lejos de la muralla?");
+    ds_queue_enqueue(global.list_chat, "Eomer: Se acerca la noche. Los monstruos no preguntan nombres. Tengo una casa cerca. Si quieres techo y silencio, sígueme.?");
+    
     
     // Activar el diálogo y crear o_chat (solo una vez)
     global.dialogue_active = true;

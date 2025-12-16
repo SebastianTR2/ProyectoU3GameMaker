@@ -27,9 +27,7 @@
     {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"npcs","instances":[
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_70BC3585","properties":[],"isDnd":false,"objectId":{"name":"o_npc_eomer","path":"objects/o_npc_eomer/o_npc_eomer.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":1556.0,"y":2990.0,},
       ],"visible":true,"depth":100,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritVisibility":true,"inheritSubLayers":true,"gridX":64,"gridY":64,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":null,"properties":[],},
-    {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"enemies","instances":[
-        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_6DD0D817","properties":[],"isDnd":false,"objectId":{"name":"o_wolf","path":"objects/o_wolf/o_wolf.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.72,"scaleY":1.56,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":1980.0,"y":2898.0,},
-      ],"visible":true,"depth":200,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritVisibility":true,"inheritSubLayers":true,"gridX":32,"gridY":32,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":null,"properties":[],},
+    {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"enemies","instances":[],"visible":true,"depth":200,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritVisibility":true,"inheritSubLayers":true,"gridX":32,"gridY":32,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":null,"properties":[],},
     {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"Decoration","instances":[
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_7937251C","properties":[],"isDnd":false,"objectId":{"name":"o_spawn_player","path":"objects/o_spawn_player/o_spawn_player.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.4285715,"scaleY":1.4714285,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":529.0,"y":495.0,},
       ],"visible":true,"depth":300,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritVisibility":true,"inheritSubLayers":true,"gridX":32,"gridY":32,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":null,"properties":[],},
@@ -731,7 +729,6 @@
     {"name":"inst_70BC3585","path":"rooms/rm_pradera/rm_pradera.yy",},
     {"name":"inst_2F720CD7","path":"rooms/rm_pradera/rm_pradera.yy",},
     {"name":"inst_117ACD93","path":"rooms/rm_pradera/rm_pradera.yy",},
-    {"name":"inst_6DD0D817","path":"rooms/rm_pradera/rm_pradera.yy",},
   ],
   "inheritCreationOrder": false,
   "sequenceId": null,

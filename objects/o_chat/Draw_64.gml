@@ -56,4 +56,4 @@ draw_text_ext_transformed(text_x, text_y, chat, sep, wrap_w, text_scale, text_sc
 
 // --- INDICADOR DE CONTINUAR ---
 draw_set_color(c_yellow);
-draw_text_transformed(gui_w - margin_x - (200 * text_scale), box_y + box_h - (40 * text_scale), "[ESPACIO]", text_scale, text_scale, 0);
+draw_text_transformed(gui_w - margin_x - (250 * text_scale), box_y + box_h - (40 * text_scale), "[E] o [ESPACIO]", text_scale, text_scale, 0);

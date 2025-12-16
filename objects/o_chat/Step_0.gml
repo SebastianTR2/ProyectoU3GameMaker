@@ -1,6 +1,6 @@
 /// STEP EVENT - o_chat
 
-if (keyboard_check_pressed(vk_enter)) {
+if (keyboard_check_pressed(vk_enter) || keyboard_check_pressed(vk_space) || keyboard_check_pressed(ord("E"))) {
 
     if (!ds_queue_empty(global.list_chat)) {
         chat = ds_queue_head(global.list_chat);

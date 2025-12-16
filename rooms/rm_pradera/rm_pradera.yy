@@ -21,7 +21,6 @@
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_34368342","properties":[],"isDnd":false,"objectId":{"name":"o_tran","path":"objects/o_tran/o_tran.yy",},"inheritCode":false,"hasCreationCode":true,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":2053.0,"y":4414.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_27F407E6","properties":[],"isDnd":false,"objectId":{"name":"o_tran","path":"objects/o_tran/o_tran.yy",},"inheritCode":false,"hasCreationCode":true,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":1425.0,"y":3028.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_6067CED2","properties":[],"isDnd":false,"objectId":{"name":"o_tran","path":"objects/o_tran/o_tran.yy",},"inheritCode":false,"hasCreationCode":true,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":4938.0,"y":4179.0,},
-        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_2F720CD7","properties":[],"isDnd":false,"objectId":{"name":"o_player","path":"objects/o_player/o_player.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":4608.0,"y":4096.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_117ACD93","properties":[],"isDnd":false,"objectId":{"name":"o_camera","path":"objects/o_camera/o_camera.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":64.0,"y":-128.0,},
       ],"visible":true,"depth":0,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritVisibility":true,"inheritSubLayers":true,"gridX":64,"gridY":64,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":null,"properties":[],},
     {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"npcs","instances":[
@@ -503,7 +502,6 @@
     {"name":"inst_3F42633C","path":"rooms/rm_pradera/rm_pradera.yy",},
     {"name":"inst_33209E0B","path":"rooms/rm_pradera/rm_pradera.yy",},
     {"name":"inst_B486930","path":"rooms/rm_pradera/rm_pradera.yy",},
-    {"name":"inst_2F720CD7","path":"rooms/rm_pradera/rm_pradera.yy",},
     {"name":"inst_117ACD93","path":"rooms/rm_pradera/rm_pradera.yy",},
     {"name":"inst_7605FF97","path":"rooms/rm_pradera/rm_pradera.yy",},
     {"name":"inst_220BF87B","path":"rooms/rm_pradera/rm_pradera.yy",},

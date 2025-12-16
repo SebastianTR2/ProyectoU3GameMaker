@@ -5,6 +5,8 @@
 init_gods_data();
 if (!variable_global_exists("ActivePantheonBonus")) global.ActivePantheonBonus = ""; // Safety fallback
 if (!variable_global_exists("control_type")) global.control_type = "topdown";
+if (!variable_global_exists("game_paused")) global.game_paused = false;
+if (!variable_global_exists("has_tutorial_key")) global.has_tutorial_key = false; // Nueva variable para la llave
 
 global.previous_room = noone; // se usará para saber de dónde venimos
 global.player_respawn = false;

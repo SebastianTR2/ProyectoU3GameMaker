@@ -3,6 +3,9 @@
   "resourceVersion": "1.6",
   "name": "ProyectoU3GameMaker",
   "resources": [
+    {"id":{"name":"o_llave_tutorial","path":"objects/o_llave_tutorial/o_llave_tutorial.yy",},"order":0,},
+    {"id":{"name":"o_tutorial_controller","path":"objects/o_tutorial_controller/o_tutorial_controller.yy",},"order":0,},
+    {"id":{"name":"scr_tutorial_dialogue","path":"scripts/scr_tutorial_dialogue/scr_tutorial_dialogue.yy",},"order":0,},
     {"id":{"name":"scr_gods_data","path":"scripts/scr_gods_data/scr_gods_data.yy",},"order":0,},
     {"id":{"name":"scr_god_interaction","path":"scripts/scr_god_interaction/scr_god_interaction.yy",},"order":0,},
     {"id":{"name":"o_dialog_box","path":"objects/o_dialog_box/o_dialog_box.yy",},"order":0,},
@@ -162,6 +165,7 @@
     {"id":{"name":"s_tran_r","path":"sprites/s_tran_r/s_tran_r.yy",},"order":0,},
     {"id":{"name":"s_ComidaPescado","path":"sprites/s_ComidaPescado/s_ComidaPescado.yy",},"order":13,},
     {"id":{"name":"o_npc_eomer","path":"objects/o_npc_eomer/o_npc_eomer.yy",},"order":1,},
+    {"id":{"name":"s_key","path":"sprites/s_key/s_key.yy",},"order":4,},
     {"id":{"name":"o_boton","path":"objects/o_boton/o_boton.yy",},"order":2,},
     {"id":{"name":"o_checkpoint","path":"objects/o_checkpoint/o_checkpoint.yy",},"order":0,},
     {"id":{"name":"s_mask_player","path":"sprites/s_mask_player/s_mask_player.yy",},"order":6,},

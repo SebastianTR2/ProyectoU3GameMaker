@@ -5,6 +5,7 @@ function scr_player_topdown(){
 	/// Movimiento, combate y control general en vista top-down
 
 	if (!variable_instance_exists(self, "move_speed")) exit;
+	if (global.game_paused) exit; // Pausa total
 	if (!can_move) exit;
 
 	if (state == "block" || state == "dead") exit; // ← añade esta línea

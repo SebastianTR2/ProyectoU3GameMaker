@@ -18,6 +18,7 @@
   "layers": [
     {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"Instances","instances":[
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_287F5839_1","properties":[],"isDnd":false,"objectId":{"name":"o_tran","path":"objects/o_tran/o_tran.yy",},"inheritCode":false,"hasCreationCode":true,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":311.0,"y":740.0,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_5D6B1B37","properties":[],"isDnd":false,"objectId":{"name":"o_npc_recepcionista","path":"objects/o_npc_recepcionista/o_npc_recepcionista.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":334.0,"y":112.0,},
       ],"visible":true,"depth":0,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritVisibility":true,"inheritSubLayers":true,"gridX":32,"gridY":32,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":null,"properties":[],},
     {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"decoration","instances":[],"visible":true,"depth":100,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritVisibility":true,"inheritSubLayers":true,"gridX":32,"gridY":32,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":null,"properties":[],},
     {"resourceType":"GMRAssetLayer","resourceVersion":"1.0","name":"Assets_1","assets":[
@@ -152,6 +153,7 @@
     {"name":"inst_4813D056","path":"rooms/rm_gremioP/rm_gremioP.yy",},
     {"name":"inst_306F2037","path":"rooms/rm_gremioP/rm_gremioP.yy",},
     {"name":"inst_7DDC66FE","path":"rooms/rm_gremioP/rm_gremioP.yy",},
+    {"name":"inst_5D6B1B37","path":"rooms/rm_gremioP/rm_gremioP.yy",},
   ],
   "inheritCreationOrder": false,
   "sequenceId": null,

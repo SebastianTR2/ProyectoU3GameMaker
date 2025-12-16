@@ -27,10 +27,10 @@
     {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"npcs","instances":[
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_70BC3585","properties":[],"isDnd":false,"objectId":{"name":"o_npc_eomer","path":"objects/o_npc_eomer/o_npc_eomer.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":1556.0,"y":2990.0,},
       ],"visible":true,"depth":100,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritVisibility":true,"inheritSubLayers":true,"gridX":64,"gridY":64,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":null,"properties":[],},
+    {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"enemies","instances":[],"visible":true,"depth":200,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritVisibility":true,"inheritSubLayers":true,"gridX":32,"gridY":32,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":null,"properties":[],},
     {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"Decoration","instances":[
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_7937251C","properties":[],"isDnd":false,"objectId":{"name":"o_spawn_player","path":"objects/o_spawn_player/o_spawn_player.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.4285715,"scaleY":1.4714285,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":529.0,"y":495.0,},
-      ],"visible":true,"depth":200,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritVisibility":true,"inheritSubLayers":true,"gridX":32,"gridY":32,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":null,"properties":[],},
-    {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"enemies","instances":[],"visible":true,"depth":300,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritVisibility":true,"inheritSubLayers":true,"gridX":32,"gridY":32,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":null,"properties":[],},
+      ],"visible":true,"depth":300,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritVisibility":true,"inheritSubLayers":true,"gridX":32,"gridY":32,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":null,"properties":[],},
     {"resourceType":"GMRAssetLayer","resourceVersion":"1.0","name":"objetos","assets":[
         {"resourceType":"GMRSpriteGraphic","resourceVersion":"1.0","name":"graphic_34782EDC","spriteId":{"name":"s_puenta1","path":"sprites/s_puenta1/s_puenta1.yy",},"headPosition":0.0,"rotation":0.0,"scaleX":0.82262206,"scaleY":0.6230367,"animationSpeed":1.0,"colour":4294967295,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":3725.0,"y":4052.0,},
       ],"visible":true,"depth":400,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritVisibility":true,"inheritSubLayers":true,"gridX":32,"gridY":32,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":null,"properties":[],},
@@ -503,7 +503,6 @@
     {"name":"inst_3F42633C","path":"rooms/rm_pradera/rm_pradera.yy",},
     {"name":"inst_33209E0B","path":"rooms/rm_pradera/rm_pradera.yy",},
     {"name":"inst_B486930","path":"rooms/rm_pradera/rm_pradera.yy",},
-    {"name":"inst_117ACD93","path":"rooms/rm_pradera/rm_pradera.yy",},
     {"name":"inst_7605FF97","path":"rooms/rm_pradera/rm_pradera.yy",},
     {"name":"inst_220BF87B","path":"rooms/rm_pradera/rm_pradera.yy",},
     {"name":"inst_1E2C8B29","path":"rooms/rm_pradera/rm_pradera.yy",},
@@ -728,6 +727,8 @@
     {"name":"inst_41F86664","path":"rooms/rm_pradera/rm_pradera.yy",},
     {"name":"inst_35B6453E","path":"rooms/rm_pradera/rm_pradera.yy",},
     {"name":"inst_70BC3585","path":"rooms/rm_pradera/rm_pradera.yy",},
+    {"name":"inst_2F720CD7","path":"rooms/rm_pradera/rm_pradera.yy",},
+    {"name":"inst_117ACD93","path":"rooms/rm_pradera/rm_pradera.yy",},
   ],
   "inheritCreationOrder": false,
   "sequenceId": null,

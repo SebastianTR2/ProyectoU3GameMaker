@@ -8,15 +8,27 @@ function scr_dialogo(_speaker, _text)
         global.list_chat = ds_queue_create();
     }
 
-    // Si ya existe un diálogo activo, no se debe duplicar
-    if (global.dialogue_active)
-    {
-        return;
-    }
-
     // -------------------------------------------
     // 2. Configurar estado del diálogo
     // -------------------------------------------
+    // Si ya existe un diálogo activo, solo añadir línea a la cola (no crear nuevo diálogo)
+    if (global.dialogue_active)
+    {
+        // Solo añadir la línea sin crear nuevo o_chat
+        var line = "";
+        if (_speaker != "" && _speaker != undefined)
+        {
+            line = _speaker + ": " + _text;
+        }
+        else
+        {
+            line = _text;
+        }
+        ds_queue_enqueue(global.list_chat, line);
+        return;
+    }
+
+    // Si no hay diálogo activo, inicializar uno nuevo
     global.dialogue_active = true;
     global.dialogo_terminado = false;
 
@@ -48,5 +60,5 @@ function scr_dialogo(_speaker, _text)
         with (o_chat) instance_destroy(); // limpiar diálogo anterior corrupto
     }
 
-    instance_create_layer(0, 0, "GUI", o_chat);
+    instance_create_layer(0, 0, "Instances", o_chat);
 }

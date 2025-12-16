@@ -2,7 +2,10 @@
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
   "name": "o_skeleton",
-  "spriteId": null,
+  "spriteId": {
+    "name": "s_skeleton_idle",
+    "path": "sprites/s_skeleton_idle/s_skeleton_idle.yy",
+  },
   "solid": false,
   "visible": true,
   "managed": true,

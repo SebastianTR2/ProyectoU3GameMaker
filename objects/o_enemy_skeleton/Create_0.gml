@@ -13,6 +13,7 @@ spd = 1.2; // Velocidad de movimiento
 state = "idle"; // idle, chase, attack, dead
 attack_hitbox_created = false; // Flag para rastrear si ya se creó el hitbox en este ataque
 attack_duration_timer = 0; // Timer para la duración del ataque
+attack_hitbox_ref = noone; // Referencia al hitbox del ataque
 
 /// RANGOS Y TIMERS
 hunt_range = 120;      // Distancia a la que detecta al jugador

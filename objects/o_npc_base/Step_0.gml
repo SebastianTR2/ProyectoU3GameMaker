@@ -29,7 +29,7 @@ if (instance_exists(player_ref)) {
             scr_start_npc_dialogo(dialog_id);
 
             dialog_played = true;
-            global.dialogue_active = true;
+            // NOTA: global.dialogue_active se asigna en scr_dialogo() para evitar conflictos
         }
     }
 

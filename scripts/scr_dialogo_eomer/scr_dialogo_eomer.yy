@@ -1,11 +1,11 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "scr_god_interaction",
+  "name": "scr_dialogo_eomer",
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Scripts",
-    "path": "folders/Scripts.yy",
+    "name": "npc_eomer",
+    "path": "folders/Scripts/History/npc_eomer.yy",
   },
 }

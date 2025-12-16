@@ -29,26 +29,8 @@ if (global.control_type == "topdown")
 {
 	
 	
-    if (state == "idle")
-    {
-        switch(sprite_facing)
-        {
-            case 0: sprite_index = s_playerIdle; image_xscale = 1; break;  // abajo
-            case 1: sprite_index = s_playerIdle; image_xscale = -1; break; // izquierda
-            case 2: sprite_index = s_playerIdle; image_xscale = 1; break;  // derecha
-            case 3: sprite_index = s_playerIdle; image_xscale = 1; break;  // arriba
-        }
-    }
-    else if (state == "walk")
-    {
-        switch(sprite_facing)
-        {
-            case 0: sprite_index = s_playerWalk; image_xscale = 1; break;
-            case 1: sprite_index = s_playerWalk; image_xscale = -1; break;
-            case 2: sprite_index = s_playerWalk; image_xscale = 1; break;
-            case 3: sprite_index = s_playerWalk; image_xscale = 1; break;
-        }
-    }
+    // Logic removed - handled at end of step
+
 }
 // -----Cambios Fernando para Saltar
 var jump = keyboard_check_pressed(vk_space);
@@ -243,103 +225,67 @@ switch(sprite_facing) {
 var ori_to_use = current_ori;
 if (variable_instance_exists(id, "ori")) ori_to_use = ori;
 
+var is_moving = (abs(mx) > 0 || abs(my) > 0);
+var is_airborne = (z != zFloor);
+var is_casting = (state == "cast");
+
 switch(ori_to_use)
 {
-	case 0: // DERECHA
-		if(speed_mov == 0)
-		{
-			if(att)
-			{
-				sprite_index = s_playerAttack; // Mapeado de s_att_right
-			}
-			else
-			{
-				sprite_index = s_playerIdle; // Mapeado de s_stand_right
-			}
-		}
-		else
-		{
-			sprite_index = s_playerWalk; // Mapeado de s_walk_right
-		}
-		image_xscale = 1;
-		
+    case 0: // DERECHA
+        image_xscale = 1;
+        if (is_casting) sprite_index = s_playerMagiaAlado;
+        else if (attacking) sprite_index = s_playerAttack; // Mapeado de s_att_right
+        else if (is_airborne) sprite_index = s_jumpAlado;
+        else if (is_moving) sprite_index = s_playerWalk; // Mapeado de s_walk_right
+        else sprite_index = s_playerIdle; // Mapeado de s_stand_right
+        
         if (instance_exists(o_inter_mask)) {
-		    o_inter_mask.x = x + 36;
-		    o_inter_mask.y = y + 10;
+            o_inter_mask.x = x + 36;
+            o_inter_mask.y = y + 10;
         }
-	break;
-	
-	case 90: // ARRIBA
-		if(speed_mov == 0)
-		{
-			if(att)
-			{
-				sprite_index = s_playerAttack; // Mapeado de s_att_up (Placeholder)
-			}
-			else
-			{
-				sprite_index = s_playerArriba; // Mapeado de s_stand_up
-			}
-		}
-		else
-		{
-			sprite_index = s_playerArriba; // Mapeado de s_walk_up
-		}
-		image_xscale = 1;
-		
+    break;
+    
+    case 90: // ARRIBA
+        image_xscale = 1;
+        if (is_casting) sprite_index = s_playerMagiaArriba;
+        else if (attacking) sprite_index = s_playerAttack; // Placeholder attack up
+        else if (is_airborne) sprite_index = s_jumpArriba;
+        else if (is_moving) sprite_index = s_playerArriba; // Mapeado de s_walk_up
+        else sprite_index = s_playerArriba; // Mapeado de s_stand_up
+        
         if (instance_exists(o_inter_mask)) {
-		    o_inter_mask.x = x;
-		    o_inter_mask.y = y - 33;
+            o_inter_mask.x = x;
+            o_inter_mask.y = y - 33;
         }
-	break;
-	
-	case 180: // IZQUIERDA
-		if(speed_mov == 0)
-		{
-			if(att)
-			{
-				sprite_index = s_playerAttack; // Mapeado de s_att_right
-			}
-			else
-			{
-				sprite_index = s_playerIdle; // Mapeado de s_stand_right
-			}
-		}
-		else
-		{
-			sprite_index = s_playerWalk; // Mapeado de s_walk_right
-		}
-		image_xscale = -1;
-		
+    break;
+    
+    case 180: // IZQUIERDA
+        image_xscale = -1;
+        if (is_casting) sprite_index = s_playerMagiaAlado;
+        else if (attacking) sprite_index = s_playerAttack; // Mapeado de s_att_right
+        else if (is_airborne) sprite_index = s_jumpAlado;
+        else if (is_moving) sprite_index = s_playerWalk; // Mapeado de s_walk_right
+        else sprite_index = s_playerIdle; // Mapeado de s_stand_right
+        
         if (instance_exists(o_inter_mask)) {
-		    o_inter_mask.x = x - 36;
-		    o_inter_mask.y = y + 10;
+            o_inter_mask.x = x - 36;
+            o_inter_mask.y = y + 10;
         }
-	break;
-	
-	case 270: // ABAJO
-		if(speed_mov == 0)
-		{
-			if(att)
-			{
-				sprite_index = s_playerAttack; // Mapeado de s_att_down (Placeholder)
-			}
-			else
-			{
-				sprite_index = s_playerAbajo; // Mapeado de s_stand_down
-			}
-		}
-		else
-		{
-			sprite_index = s_playerAbajo; // Mapeado de s_walk_down
-		}
-		image_xscale = 1;
-		
+    break;
+    
+    case 270: // ABAJO
+        image_xscale = 1;
+        if (is_casting) sprite_index = s_playerMagiaAbajo;
+        else if (attacking) sprite_index = s_playerAttack; // Placeholder attack down
+        else if (is_airborne) sprite_index = s_jumpAbajo;
+        else if (is_moving) sprite_index = s_playerAbajo; // Mapeado de s_walk_down
+        else sprite_index = s_playerAbajo; // Mapeado de s_stand_down
+        
         if (instance_exists(o_inter_mask)) {
-		    o_inter_mask.x = x;
-		    o_inter_mask.y = y + 53;
+            o_inter_mask.x = x;
+            o_inter_mask.y = y + 53;
         }
-	break;
+    break;
 }
 
 if (instance_exists(o_inter_mask)) {

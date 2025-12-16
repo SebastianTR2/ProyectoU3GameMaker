@@ -5,7 +5,7 @@ function scr_start_npc_dialogo(dialog_id){
         case "npc_guardian":        scr_dialogo_guardian(); break;
         case "npc_mika":            scr_dialogo_gato(); break;
         case "npc_eomer":           scr_dialogo_eomer(); break;
-        case "npc_recepcionista":   scr_dialogo_recepcionista(); break;
+        case "npc_recepcionista":   scr_recepcionista(); break;
         default:
             show_debug_message("⚠️ NPC sin diálogo definido: " + string(dialog_id));
     }

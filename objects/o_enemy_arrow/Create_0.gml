@@ -13,3 +13,4 @@ owner = noone; // Se asignará desde el arquero
 sprite_index = s_arrow;
 image_speed = 0.5;
 
+

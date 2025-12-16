@@ -2,7 +2,10 @@
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
   "name": "o_skeleton_arrow",
-  "spriteId": null,
+  "spriteId": {
+    "name": "s_arrow",
+    "path": "sprites/s_arrow/s_arrow.yy",
+  },
   "solid": false,
   "visible": true,
   "managed": true,

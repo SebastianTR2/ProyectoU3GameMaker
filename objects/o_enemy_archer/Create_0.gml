@@ -27,6 +27,7 @@ shoot_duration = 15;     // Duración de la animación de disparo
 sprite_index = s_archer_idle;
 image_speed = 0.3;
 image_xscale = 1; // 1 = derecha, -1 = izquierda
+visible = true; // Asegurar que sea visible
 
 /// OTROS
 xp_drop = 15; // Experiencia que otorga al morir

@@ -5,7 +5,7 @@
 /// ==========================================
 
 damage = 1;
-lifespan = 10; // Duración del hitbox en frames
+lifespan = 25; // Duración del hitbox en frames (aumentado para cubrir toda la animación)
 owner = noone; // Se asignará desde el esqueleto
 has_hit = false; // Flag para asegurar que solo golpee una vez
 attack_type = "physical";

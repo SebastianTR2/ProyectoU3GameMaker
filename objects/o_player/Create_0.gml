@@ -36,15 +36,16 @@ damage = 10;
 attack_cooldown = 15;
 attack_timer = 0;
 attacking = false;
-invulnerable_timer = 0;
+invulnerable_timer = 0;        // Timer de invulnerabilidad (se reduce en Step)
+invulnerable_duration = 60;   // Duración de invulnerabilidad después de recibir daño (en frames)
 defense = 2;
 affinity = "fire"; // elemento inicial
 weapon_equipped = o_sword; // Objeto de espada
 magic_equipped = o_magic_projectile;
 
-// === VARIABLES DE INVULNERABILIDAD ===
-invi = 0;           // indica si el jugador está invulnerable
-invi_time = 30;     // duración de la invulnerabilidad (en frames)
+// === VARIABLES DE INVULNERABILIDAD (legacy - mantener para compatibilidad) ===
+invi = 0;           // indica si el jugador está invulnerable (legacy)
+invi_time = 30;     // duración de la invulnerabilidad (en frames) (legacy)
 
 
 /// EXPERIENCIA

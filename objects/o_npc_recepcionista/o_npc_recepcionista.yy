@@ -2,7 +2,10 @@
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
   "name": "o_npc_recepcionista",
-  "spriteId": null,
+  "spriteId": {
+    "name": "s_npc_recepcionista",
+    "path": "sprites/s_npc_recepcionista/s_npc_recepcionista.yy",
+  },
   "solid": false,
   "visible": true,
   "managed": true,

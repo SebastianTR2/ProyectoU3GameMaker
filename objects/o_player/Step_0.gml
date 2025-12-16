@@ -5,6 +5,15 @@
 	
 if (invulnerable_timer > 0) invulnerable_timer--;
 
+// TUTORIAL SPAWN
+if (room == rm_Trampa_Subteranea && !instance_exists(o_tutorial_controller)) {
+    // Asegurarse de que la capa existe, sino usar depth
+    if (layer_exists("Instances"))
+        instance_create_layer(0, 0, "Instances", o_tutorial_controller);
+    else
+        instance_create_depth(0, 0, -100, o_tutorial_controller);
+}
+
 // Control según modo
 switch (global.control_type)
 {
@@ -420,13 +429,20 @@ if (level_up_timer > 0) level_up_timer--;
 if (keyboard_check_pressed(ord("C")))
 {
     menu_open = !menu_open;
-    if (menu_open) can_move = false; else can_move = true; // Pausa movimiento
+    if (menu_open) {
+        can_move = false;
+        global.game_paused = true;
+    } else {
+        can_move = true;
+        global.game_paused = false;
+    }
 }
 
 if (keyboard_check_pressed(vk_escape) && menu_open)
 {
     menu_open = false;
     can_move = true;
+    global.game_paused = false;
 }
 
 if (menu_open)

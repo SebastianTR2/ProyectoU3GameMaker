@@ -10,6 +10,8 @@ if (ds_queue_empty(global.list_chat)) {
 chat = ds_queue_head(global.list_chat);
 ds_queue_dequeue(global.list_chat);
 
+global.game_paused = true;
+
 camera_x = camera_get_view_x(view_camera[0]);
 camera_y = camera_get_view_y(view_camera[0]);
 

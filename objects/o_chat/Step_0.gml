@@ -1,6 +1,6 @@
 /// STEP EVENT - o_chat
 
-if (keyboard_check_pressed(vk_space)) {
+if (keyboard_check_pressed(vk_enter)) {
 
     if (!ds_queue_empty(global.list_chat)) {
         chat = ds_queue_head(global.list_chat);
@@ -21,11 +21,13 @@ if (keyboard_check_pressed(vk_space)) {
 
             // IMPORTANTE: marcar finalización del diálogo ANTES del room_goto
             global.dialogo_terminado = true;
+            global.game_paused = false;
             room_goto(next);
         }
 
         // DIÁLOGO TERMINADO NORMALMENTE
         global.dialogo_terminado = true;
+        global.game_paused = false;
         instance_destroy();
     }
 }

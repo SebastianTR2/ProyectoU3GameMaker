@@ -38,6 +38,25 @@ if (variable_instance_exists(id, "entry_id") && entry_id != noone && entry_id !=
 
 // 3. Cambiar de sala
 if (target_room != noone && room_exists(target_room)) {
+    
+    // === LÓGICA DE PUERTA CERRADA (TUTORIAL) ===
+    if (room == rm_Trampa_Subteranea && target_room == rm_Camara_Artefacto) {
+        if (!variable_global_exists("has_tutorial_key") || global.has_tutorial_key == false) {
+             if (!instance_exists(o_dialog_box)) {
+                 if (variable_global_exists("list_chat") && global.list_chat != undefined) {
+                     ds_queue_enqueue(global.list_chat, "La puerta está sellada con un antiguo mecanismo de cierre.");
+                     ds_queue_enqueue(global.list_chat, "Necesitas encontrar la llave para abrirla.");
+                     ds_queue_enqueue(global.list_chat, "Quizás derrotar a todos los enemigos revele algo...");
+                 }
+            }
+            // Empujar al jugador un poco para que no spamee el mensaje
+            with(other) {
+                y -= 10; 
+            }
+            exit; // NO HACER LA TRANSICIÓN
+        }
+    }
+    
     // IMPORTANTE: Mover al jugador fuera de la pantalla o desactivarlo
     // para evitar colisiones múltiples en el mismo frame si el cambio tarda.
     // (Opcional, pero recomendado)

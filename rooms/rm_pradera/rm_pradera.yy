@@ -503,7 +503,6 @@
     {"name":"inst_3F42633C","path":"rooms/rm_pradera/rm_pradera.yy",},
     {"name":"inst_33209E0B","path":"rooms/rm_pradera/rm_pradera.yy",},
     {"name":"inst_B486930","path":"rooms/rm_pradera/rm_pradera.yy",},
-    {"name":"inst_2F720CD7","path":"rooms/rm_pradera/rm_pradera.yy",},
     {"name":"inst_117ACD93","path":"rooms/rm_pradera/rm_pradera.yy",},
     {"name":"inst_7605FF97","path":"rooms/rm_pradera/rm_pradera.yy",},
     {"name":"inst_220BF87B","path":"rooms/rm_pradera/rm_pradera.yy",},

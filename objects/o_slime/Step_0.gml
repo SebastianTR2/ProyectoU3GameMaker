@@ -4,6 +4,12 @@
 /// ==========================================
 
 var target = o_player;
+if (global.game_paused) {
+    image_speed = 0;
+    exit;
+} else {
+    image_speed = 1;
+}
 if (!instance_exists(target)) exit;
 
 var dist = point_distance(x, y, target.x, target.y);

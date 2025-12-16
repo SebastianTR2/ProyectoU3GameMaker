@@ -31,16 +31,19 @@ if (sprite_exists(s_cuadro_Dialogo_Prueba)) {
 }
 
 // --- CONFIGURAR FUENTE Y COLOR ---
-draw_set_font(f_espanol);
-draw_set_color(c_white);
-
-// --- TÍTULO ---
+// --- TÍTULO (Nombre del Dios) ---
 var text_w = w - (margin_x * 2.5);
 var text_x = w / 2;
-var text_y = box_y + 25;
+var text_y = box_y + 15; // Arriba DENTRO del cuadro
 
 draw_set_halign(fa_center);
+draw_set_valign(fa_top); // Importante top para que no se suba
+
+// Texto del título (Amarillo)
+draw_set_color(c_yellow);
 draw_text(text_x, text_y, text);
+
+// Reset
 draw_set_halign(fa_left);
 
 // --- DIBUJAR OPCIONES ---

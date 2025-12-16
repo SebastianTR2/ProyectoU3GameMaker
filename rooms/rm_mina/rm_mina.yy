@@ -18,6 +18,9 @@
   "layers": [
     {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"Instances","instances":[
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_9E94FAB","properties":[],"isDnd":false,"objectId":{"name":"o_tran","path":"objects/o_tran/o_tran.yy",},"inheritCode":false,"hasCreationCode":true,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":2078.0,"y":346.0,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_6B7DFE51","properties":[],"isDnd":false,"objectId":{"name":"o_estatuas","path":"objects/o_estatuas/o_estatuas.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":0.25233644,"scaleY":0.21472393,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":928.0,"y":1216.0,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_482E10B9","properties":[],"isDnd":false,"objectId":{"name":"o_estatuas","path":"objects/o_estatuas/o_estatuas.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":0.25233644,"scaleY":0.21472393,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":800.0,"y":384.0,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_4AE55B76","properties":[],"isDnd":false,"objectId":{"name":"o_estatuas","path":"objects/o_estatuas/o_estatuas.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":0.25233644,"scaleY":0.21472393,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":96.0,"y":2048.0,},
       ],"visible":true,"depth":0,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritVisibility":true,"inheritSubLayers":true,"gridX":32,"gridY":32,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":null,"properties":[],},
     {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"decoration","instances":[
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_25848B56","properties":[],"isDnd":false,"objectId":{"name":"o_puerta2","path":"objects/o_puerta2/o_puerta2.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":-89.95395,"scaleX":0.33855188,"scaleY":0.18890814,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":2066.139,"y":1638.4856,},
@@ -263,6 +266,9 @@
     {"name":"inst_403016D4","path":"rooms/rm_mina/rm_mina.yy",},
     {"name":"inst_30A7E32F","path":"rooms/rm_mina/rm_mina.yy",},
     {"name":"inst_25848B56","path":"rooms/rm_mina/rm_mina.yy",},
+    {"name":"inst_6B7DFE51","path":"rooms/rm_mina/rm_mina.yy",},
+    {"name":"inst_482E10B9","path":"rooms/rm_mina/rm_mina.yy",},
+    {"name":"inst_4AE55B76","path":"rooms/rm_mina/rm_mina.yy",},
   ],
   "inheritCreationOrder": false,
   "sequenceId": null,

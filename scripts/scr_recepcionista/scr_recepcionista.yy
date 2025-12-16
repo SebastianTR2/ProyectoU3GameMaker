@@ -5,7 +5,7 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "npc_recepcionista",
-    "path": "folders/Scripts/History/npc_recepcionista.yy",
+    "name": "Scripts",
+    "path": "folders/Scripts.yy",
   },
 }

@@ -8,8 +8,11 @@ if (!place_meeting(x, y, o_player)) {
 
 player_near = true;
 
-// Verificar si el jugador presiona E
-if (keyboard_check_pressed(ord("E"))) {
+// Verificar si el jugador presiona E o es automática
+var _auto = false;
+if (variable_instance_exists(id, "auto") && auto) _auto = true;
+
+if (keyboard_check_pressed(ord("E")) || _auto) {
     // Asegurar target_room actualizado
     if (variable_instance_exists(id, "target")) {
         if (target_room == noone || target != target_room) {

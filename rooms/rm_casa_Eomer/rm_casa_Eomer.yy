@@ -18,6 +18,7 @@
   "layers": [
     {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"Instances","instances":[
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_287F5839","properties":[],"isDnd":false,"objectId":{"name":"o_tran","path":"objects/o_tran/o_tran.yy",},"inheritCode":false,"hasCreationCode":true,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":192.0,"y":608.0,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_69EC2D10","properties":[],"isDnd":false,"objectId":{"name":"o_estatuas","path":"objects/o_estatuas/o_estatuas.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":0.25233644,"scaleY":0.21472393,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":160.0,"y":96.0,},
       ],"visible":true,"depth":0,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritVisibility":true,"inheritSubLayers":true,"gridX":32,"gridY":32,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":null,"properties":[],},
     {"resourceType":"GMRAssetLayer","resourceVersion":"1.0","name":"Assets_1","assets":[
         {"resourceType":"GMRSpriteGraphic","resourceVersion":"1.0","name":"graphic_EE75CB7","spriteId":{"name":"s_dec_Eomer_cama","path":"sprites/s_dec_Eomer_cama/s_dec_Eomer_cama.yy",},"headPosition":0.0,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"animationSpeed":1.0,"colour":4294967295,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":24.0,"y":405.0,},
@@ -81,6 +82,7 @@
     {"name":"inst_7C67974C","path":"rooms/rm_casa_Eomer/rm_casa_Eomer.yy",},
     {"name":"inst_6C18F681","path":"rooms/rm_casa_Eomer/rm_casa_Eomer.yy",},
     {"name":"inst_3E05DF97","path":"rooms/rm_casa_Eomer/rm_casa_Eomer.yy",},
+    {"name":"inst_69EC2D10","path":"rooms/rm_casa_Eomer/rm_casa_Eomer.yy",},
   ],
   "inheritCreationOrder": false,
   "sequenceId": null,

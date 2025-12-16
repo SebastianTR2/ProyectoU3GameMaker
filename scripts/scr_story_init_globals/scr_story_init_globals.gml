@@ -15,6 +15,9 @@ function scr_story_init_globals() {
     global.story_phase      = 0;      // fase principal (número o string)
     global.story_subphase   = 0;      // subfase opcional
     global.story_chapter    = 1;      // capítulo grande (opcional)
+    
+    // Debug
+    global.debug_mode = false;
 
     /// ===============================
     /// FLAGS Y RUTAS

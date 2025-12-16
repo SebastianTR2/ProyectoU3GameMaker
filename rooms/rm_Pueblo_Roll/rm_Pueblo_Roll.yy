@@ -16,7 +16,12 @@
     {"inherit":false,"visible":false,"xview":0,"yview":0,"wview":1366,"hview":768,"xport":0,"yport":0,"wport":1366,"hport":768,"hborder":32,"vborder":32,"hspeed":-1,"vspeed":-1,"objectId":null,},
   ],
   "layers": [
-    {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"Instances","instances":[],"visible":true,"depth":0,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritVisibility":true,"inheritSubLayers":true,"gridX":32,"gridY":32,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":null,"properties":[],},
+    {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"Instances","instances":[
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_5F43CC49","properties":[],"isDnd":false,"objectId":{"name":"o_estatuas","path":"objects/o_estatuas/o_estatuas.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":0.25233644,"scaleY":0.21472394,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":160.0,"y":1600.0,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_274CF480","properties":[],"isDnd":false,"objectId":{"name":"o_estatuas","path":"objects/o_estatuas/o_estatuas.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":0.25233644,"scaleY":0.21472393,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":1600.0,"y":128.0,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_55ECEFA8","properties":[],"isDnd":false,"objectId":{"name":"o_estatuas","path":"objects/o_estatuas/o_estatuas.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":0.25233644,"scaleY":0.21472393,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":1632.0,"y":1792.0,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_314A3D05","properties":[],"isDnd":false,"objectId":{"name":"o_estatuas","path":"objects/o_estatuas/o_estatuas.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":0.25233644,"scaleY":0.21472393,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":1632.0,"y":704.0,},
+      ],"visible":true,"depth":0,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritVisibility":true,"inheritSubLayers":true,"gridX":32,"gridY":32,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":null,"properties":[],},
     {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"Instances2","instances":[
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_4BA57FB7","properties":[],"isDnd":false,"objectId":{"name":"o_player","path":"objects/o_player/o_player.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":1034.0,"y":989.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_136C8073","properties":[],"isDnd":false,"objectId":{"name":"o_camera","path":"objects/o_camera/o_camera.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":0.0,"y":-64.0,},
@@ -357,6 +362,10 @@
     {"name":"inst_330AEAE1","path":"rooms/rm_Pueblo_Roll/rm_Pueblo_Roll.yy",},
     {"name":"inst_77EF4468","path":"rooms/rm_Pueblo_Roll/rm_Pueblo_Roll.yy",},
     {"name":"inst_60508C76","path":"rooms/rm_Pueblo_Roll/rm_Pueblo_Roll.yy",},
+    {"name":"inst_5F43CC49","path":"rooms/rm_Pueblo_Roll/rm_Pueblo_Roll.yy",},
+    {"name":"inst_274CF480","path":"rooms/rm_Pueblo_Roll/rm_Pueblo_Roll.yy",},
+    {"name":"inst_55ECEFA8","path":"rooms/rm_Pueblo_Roll/rm_Pueblo_Roll.yy",},
+    {"name":"inst_314A3D05","path":"rooms/rm_Pueblo_Roll/rm_Pueblo_Roll.yy",},
   ],
   "inheritCreationOrder": false,
   "sequenceId": null,

@@ -15,5 +15,10 @@ function scr_player_die(){
 	global.player_dead = true;
 	
 	// Reiniciar a la última sala guardada o checkpoint
-	room_restart();
+	// Reiniciar a la última sala guardada o checkpoint
+	if (variable_global_exists("checkpoint_room") && room_exists(global.checkpoint_room)) {
+	    room_goto(global.checkpoint_room);
+	} else {
+	    room_restart();
+	}
 }

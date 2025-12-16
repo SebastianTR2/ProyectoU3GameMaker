@@ -39,7 +39,7 @@ draw_set_valign(fa_top);
 // --- TEXTO DEL DIÁLOGO ---
 var text_w = (gui_w - (margin_x * 3)); // Ancho total disponible
 var text_x = margin_x * 1.5;           
-var text_y = box_y + (box_h * 0.15);   // Padding superior relativo
+var text_y = box_y + 60;   // Padding superior AUMENTADO para dejar espacio al título
 
 // Ajustar separación y ancho relativo a la escala
 var sep = 35 * text_scale; 

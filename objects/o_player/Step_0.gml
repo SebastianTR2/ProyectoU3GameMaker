@@ -378,7 +378,7 @@ else if (state == "block")
 if (keyboard_check_pressed(ord("E")) && can_interact)
 {
     // Usamos collision_circle para detectar objetos cercanos sin necesidad de estar "dentro" de ellos (útil para sólidos)
-    var _radius = 64; // Aumentado a 64 para mejor detección
+    var _radius = 80; // Aumentado a 80 para mejor detección de NPCs y cofres
     var obj = collision_circle(x, y, _radius, o_interactable, false, true);
     
     if (obj != noone) 
@@ -505,3 +505,6 @@ if (hp <= 0 && dead == 0)
 {
     scr_player_die();
 }
+
+// PROFUNDIDAD VISUAL (DEPTH SORTING)
+depth = -y;

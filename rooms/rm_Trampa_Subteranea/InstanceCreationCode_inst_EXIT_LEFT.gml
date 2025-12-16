@@ -10,3 +10,6 @@ entry_id = "salida_trampa"; // ID para que el otro lado sepa dónde colocar al j
 // Fallback por si no hay previous_room definido
 // target = rm_Santuario_Guardian; // This line is commented out or removed as target is now fixed
 ori = 270; // izquierda
+
+// NUEVO: Transición automática (estilo salida normal)
+auto = true;

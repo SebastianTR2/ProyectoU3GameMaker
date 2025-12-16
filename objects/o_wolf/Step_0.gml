@@ -74,29 +74,23 @@ switch (state)
 // ================================================
 // CAMBIO DE SPRITES SEGÚN DIRECCIÓN Y ESTADO
 // ================================================
-
-// Orientación (Flip horizontal)
-if (x != target.x)
+if (dir_to_player < 90 || dir_to_player > 270) // jugador a la derecha
 {
-    image_xscale = sign(target.x - x);
+    switch (state)
+    {
+        case "idle": sprite_index = s_wolf_reposo_derecha; break;
+        case "hunting": sprite_index = s_wolf_caminando_derecha; break;
+        case "attacking": sprite_index = s_wolf_atacando_derecha; break;
+        case "dead": sprite_index = s_wolf_reposo_derecha; break;
+    }
 }
-
-// Asignación de sprites según estado
-switch (state)
+else // jugador a la izquierda
 {
-    case "idle": 
-        sprite_index = s_wolf_reposo; 
-        break;
-        
-    case "hunting": 
-        sprite_index = s_wolf_caminando; 
-        break;
-        
-    case "attacking": 
-        sprite_index = s_wolf_attack; 
-        break;
-        
-    case "dead": 
-        sprite_index = s_wolf_reposo; 
-        break;
+    switch (state)
+    {
+        case "idle": sprite_index = s_wolf_reposo; break;
+        case "hunting": sprite_index = s_wolf_caminando; break;
+        case "attacking": sprite_index = s_wolf_atacando; break;
+        case "dead": sprite_index = s_wolf_reposo; break;
+    }
 }

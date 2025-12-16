@@ -2,10 +2,7 @@
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
   "name": "o_wolf",
-  "spriteId": {
-    "name": "s_wolf_reposo",
-    "path": "sprites/s_wolf_reposo/s_wolf_reposo.yy",
-  },
+  "spriteId": null,
   "solid": false,
   "visible": true,
   "managed": true,

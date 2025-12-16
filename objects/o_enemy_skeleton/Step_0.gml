@@ -77,6 +77,7 @@ switch (state)
             if (hitbox != noone) {
                 hitbox.owner = id; // Asignar el esqueleto como dueño
                 hitbox.damage = damage;
+                attack_hitbox_ref = hitbox; // Guardar referencia para moverlo
                 show_debug_message("Esqueleto creó hitbox de ataque");
             }
             
@@ -85,13 +86,29 @@ switch (state)
             attack_duration_timer = attack_duration;
         }
         
+        // Mover el hitbox con el esqueleto durante el ataque
+        // Recalcular dirección hacia el jugador (puede haberse movido)
+        var current_dir = point_direction(x, y, target.x, target.y);
+        var offset = 30;
+        if (instance_exists(attack_hitbox_ref)) {
+            // Actualizar posición del hitbox delante del esqueleto
+            attack_hitbox_ref.x = x + lengthdir_x(offset, current_dir);
+            attack_hitbox_ref.y = y + lengthdir_y(offset, current_dir);
+        }
+        
         // Reducir timer de duración del ataque
         attack_duration_timer--;
         
         // Después de la duración del ataque, volver a chase o idle
         if (attack_duration_timer <= 0) {
+            // Destruir el hitbox si aún existe
+            if (instance_exists(attack_hitbox_ref)) {
+                with (attack_hitbox_ref) instance_destroy();
+            }
+            
             attack_timer = attack_cooldown; // Reiniciar cooldown
             attack_hitbox_created = false; // Resetear flag para el próximo ataque
+            attack_hitbox_ref = noone;
             
             // Si el jugador se alejó, perseguir; si no, volver a idle
             if (dist > attack_range + 10) {
@@ -106,6 +123,11 @@ switch (state)
     case "dead":
         sprite_index = s_skeleton_dead;
         image_speed = 0.2;
+        
+        // Destruir hitbox si existe
+        if (instance_exists(attack_hitbox_ref)) {
+            with (attack_hitbox_ref) instance_destroy();
+        }
         
         // Dar experiencia al jugador
         if (instance_exists(target)) {

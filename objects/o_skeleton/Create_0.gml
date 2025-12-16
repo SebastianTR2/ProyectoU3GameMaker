@@ -22,12 +22,12 @@ light_weakness = 1.4;
 dark_resistance = 0.7;
 
 // === VISUAL ===
-sprite_idle = s_esqueleto_reposo;
-sprite_walk = s_esqueleto_reposo;
-sprite_attack_melee = s_esqueleto_attack;
-sprite_attack_ranged = s_esqueleto_attack;
-sprite_attack_lance = s_esqueleto_attack;
-sprite_dead = s_esqueleto_reposo;
+sprite_idle = s_skeleton_idle;
+sprite_walk = s_skeleton_walk;
+sprite_attack_melee = s_skeleton_attack;
+sprite_attack_ranged = s_skeleton_attack;
+sprite_attack_lance = s_skeleton_attack;
+sprite_dead = s_skeleton_dead;
 
 
 // === OTROS ===
